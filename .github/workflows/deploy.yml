@@ -18,15 +18,6 @@ jobs:
         with:
           node-version: '20.11.0'  # Utilisez la version de Node.js requise par votre projet
 
-      - name: Create gh-pages branch
-        run: |
-          git checkout --orphan gh-pages
-          git rm -rf .
-          touch README.md
-          git add README.md
-          git commit -m "Initialize gh-pages"
-          git push origin gh-pages
-
       - name: Install dependencies
         run: npm install
 
